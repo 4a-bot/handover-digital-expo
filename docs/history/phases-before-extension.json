@@ -1,0 +1,56 @@
+[
+  {
+    "id": "planning",
+    "title": "企劃",
+    "summary": "先讓接手者知道展覽要完成什麼，以及每件事由誰接續。",
+    "taskIds": [
+      "define-exhibition",
+      "assign-handover"
+    ]
+  },
+  {
+    "id": "intake",
+    "title": "收件",
+    "summary": "建立可追蹤的展品資料，辨認目前展示版本。",
+    "taskIds": [
+      "collect-exhibit",
+      "confirm-version"
+    ]
+  },
+  {
+    "id": "preparation",
+    "title": "展示準備",
+    "summary": "試跑實際操作，準備設備與可用的替代材料。",
+    "taskIds": [
+      "check-environment",
+      "prepare-fallback"
+    ]
+  },
+  {
+    "id": "live",
+    "title": "現場執行",
+    "summary": "依固定範例示範，留下問題與處理結果。",
+    "taskIds": [
+      "opening-check",
+      "demonstrate-record"
+    ]
+  },
+  {
+    "id": "teardown",
+    "title": "撤展",
+    "summary": "清點設備與檔案，保留正確成果及尚未解決事項。",
+    "taskIds": [
+      "close-display",
+      "reconcile-records"
+    ]
+  },
+  {
+    "id": "archive",
+    "title": "結案交接",
+    "summary": "把成果、決策與下一步整理成可接續的交接包。",
+    "taskIds": [
+      "assemble-package",
+      "verify-handover"
+    ]
+  }
+]
