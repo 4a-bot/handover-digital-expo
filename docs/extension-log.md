@@ -1,6 +1,6 @@
 # 按 AGENTS.md 新增與修改內容的實際演練
 
-日期：2026-11-16。執行者為 AI；本紀錄是軟體內容擴充，並非真實展覽換班紀錄。
+日期：2026-11-16。本次與 AI 協作，依 AGENTS.md 擴充網站內容；以下記錄程式與文件的修改及驗證。
 
 ## 要解決的缺口
 
@@ -18,7 +18,7 @@
 
 新增任務沿用 id、phaseId、role、前置資料、步驟、產出、完成判準、關聯與後續任務等欄位。首頁、任務詳情、搜尋、範本反向連結及交接匯出沿用共用渲染邏輯；只在發現比較頁數量硬編碼時修正一次共用程式。
 
-修改前快照為 docs/history/tasks-before-extension.json、phases-before-extension.json、templates-before-extension.json；修改後資料位於 dist/data/。AGENTS-v0.4.md 保存修改前規則。
+修改前快照為 docs/history/tasks-before-extension.json、phases-before-extension.json、templates-before-extension.json；修改後資料位於 dist/data/。AGENTS-v0.4.md 保存修改前規則的整理稿，檔首註明敘述修訂；逐字原稿可由 Git 歷史追溯。資料快照未作文字改寫。
 
 ## 規則如何因此改進
 
