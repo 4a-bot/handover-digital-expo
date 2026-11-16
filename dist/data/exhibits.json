@@ -1,0 +1,59 @@
+[
+  {
+    "id": "ex-list-cleaner",
+    "slug": "list-cleaner",
+    "title": "清單整理器",
+    "purpose": "整理逐行清單的空白與完全重複項目，保留原順序。",
+    "creation": "本專案以 AI 協作開發的原創示範工具。",
+    "implementationStatus": "browser-checked",
+    "verificationNote": "2026-11-16：已在 Chrome 試跑固定範例，確認 3 筆結果、下載檔內容與輸入變更後停用舊結果匯出。",
+    "sampleInput": " 延長線 \nHDMI 線\n延長線\n\n筆電",
+    "expectedOutput": "延長線\nHDMI 線\n筆電",
+    "steps": [
+      "貼上範例清單。",
+      "確認清理選項並執行整理。",
+      "對照三筆結果與移除數量。",
+      "複製或下載整理後文字。"
+    ],
+    "limits": [
+      "只處理逐行文字，不辨認項目語意。",
+      "不把大小寫、全半形或內部空白不同的項目視為同一筆。"
+    ],
+    "fallbackStatus": "packaged",
+    "version": "0.2",
+    "displayPath": "tools/list-cleaner/",
+    "fallbackPath": "downloads/list-cleaner-offline.html",
+    "runtime": "支援 JavaScript 的現代瀏覽器；資料在本機處理。"
+  },
+  {
+    "id": "ex-label-maker",
+    "slug": "label-maker",
+    "title": "展品說明牌產生器",
+    "purpose": "檢查作品欄位，製作可閱讀、可列印的說明牌。",
+    "creation": "本專案以 AI 協作開發的原創示範工具。",
+    "implementationStatus": "browser-checked",
+    "verificationNote": "2026-11-16：已試跑預覽、必填與 41 字超長提示、HTML 字串安全顯示，以及 390 px 容器操作。雲端瀏覽器未顯示系統列印視窗，實際紙張輸出仍須在展示裝置確認。",
+    "sampleInput": {
+      "title": "清單整理器",
+      "format": "網頁工具",
+      "description": "整理空行與重複項目，保留原始順序。",
+      "credit": "本專案 AI 協作示範"
+    },
+    "expectedOutput": "說明牌完整顯示輸入欄位；欄位有效，不自動截斷或補造資訊。",
+    "steps": [
+      "填入範例欄位。",
+      "確認預覽中的文字與順序。",
+      "嘗試留空必填欄位，查看提示。",
+      "恢復完整資料並檢查列印版面。"
+    ],
+    "limits": [
+      "不自動改寫作品介紹。",
+      "欄位過長時保留原文並提示修改。"
+    ],
+    "fallbackStatus": "packaged",
+    "version": "0.2",
+    "displayPath": "tools/label-maker/",
+    "fallbackPath": "downloads/label-maker-offline.html",
+    "runtime": "支援 JavaScript 的現代瀏覽器；資料在本機處理。"
+  }
+]
