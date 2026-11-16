@@ -2,7 +2,7 @@
 
 協助課程專題與數位作品展的籌備者與接手者，從任務找到操作、文件、展示入口與完成判準。
 
-本專案以 AI 協作製作。內容、工具與版型自行設計；活動情境為示範，實際程式測試另記於 `docs/validation.md`。
+我以數位展務的交接需求為題，與 AI 協作完成內容、工具、版型與開發文件。活動情境為設計練習，實際程式測試記於 `docs/validation.md`。
 
 公開網站：[https://handover-digital-expo-7ad055.creamybrink32.chatgpt.site/](https://handover-digital-expo-7ad055.creamybrink32.chatgpt.site/)
 
@@ -53,7 +53,7 @@ node --test tests/tool-logic.test.mjs
 | dist/assets/css/ | 共用風格與工具樣式 |
 | scripts/build_site.py | 產生頁面外殼與單檔工具 |
 | scripts/prepare_templates.py | 從資料產生範本下載檔 |
-| docs/history/ | 真實的先前規則與內容版本 |
+| docs/history/ | 附編輯說明的先前規則整理稿、原樣保留的內容快照 |
 | docs/validation.md | 已做的檢查與限制 |
 
 ## 如何新增內容
@@ -64,7 +64,7 @@ node --test tests/tool-logic.test.mjs
 
 ## 交付進度
 
-網站、正式命名、視覺、AGENTS.md 1.0、擴充演練與公開 GitHub Repository 均已備齊。繳交內容與連結請看 docs/submission.md。
+網站、正式命名、視覺、AGENTS.md 1.0.1、擴充演練與公開 GitHub Repository 均已備齊。繳交內容與連結請看 docs/submission.md。
 
 系統列印與離線 `file:` 開啟受目前雲端瀏覽器環境限制，未宣稱實機通過。詳見驗證紀錄。
 
