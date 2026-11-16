@@ -1,0 +1,424 @@
+[
+  {
+    "id": "define-exhibition",
+    "phaseId": "planning",
+    "title": "確認展示目的與範圍",
+    "role": "籌備負責人",
+    "prerequisites": [
+      "確認主要觀眾與展示方式。"
+    ],
+    "steps": [
+      "用一句話寫出觀眾操作後應理解的事情。",
+      "列出本次展品與預計展示的核心功能。",
+      "把已確定、待確認及本次不展示的事項分開記錄。"
+    ],
+    "deliverable": "展覽概況與範圍紀錄",
+    "doneWhen": [
+      "接手者能說出展示目的與首批展品。",
+      "待確認事項有負責職務及下一步。"
+    ],
+    "templateIds": [
+      "f02"
+    ],
+    "exhibitIds": [
+      "ex-list-cleaner",
+      "ex-label-maker"
+    ],
+    "incidentIds": [],
+    "nextIds": [
+      "assign-handover"
+    ]
+  },
+  {
+    "id": "assign-handover",
+    "phaseId": "planning",
+    "title": "安排分工與交接節點",
+    "role": "籌備負責人",
+    "prerequisites": [
+      "展覽範圍已記錄。"
+    ],
+    "steps": [
+      "為收件、測試、現場示範與歸檔指定負責職務。",
+      "對每項交付寫出完成條件與預定確認時點。",
+      "記錄人員更換時應交出的資料及未完成事項。"
+    ],
+    "deliverable": "分工及交接安排",
+    "doneWhen": [
+      "每項工作至少有一個負責職務。",
+      "接手者能找到相關文件與後續工作。"
+    ],
+    "templateIds": [
+      "f05"
+    ],
+    "exhibitIds": [],
+    "incidentIds": [],
+    "nextIds": [
+      "collect-exhibit"
+    ]
+  },
+  {
+    "id": "collect-exhibit",
+    "phaseId": "intake",
+    "title": "收齊作品資料與操作範例",
+    "role": "展品整理人員",
+    "prerequisites": [
+      "已確定要收錄的作品。"
+    ],
+    "steps": [
+      "建立固定作品編號，記錄名稱、用途、創作方式與展示入口。",
+      "收集操作條件、範例輸入、預期結果與已知限制。",
+      "對缺漏欄位標示待補，保留補件負責職務與下一步。"
+    ],
+    "deliverable": "可追蹤的展品資料",
+    "doneWhen": [
+      "每件展品都有固定編號。",
+      "範例輸入與預期結果能相互對應。",
+      "缺漏資料未被標成已確認。"
+    ],
+    "templateIds": [
+      "f01"
+    ],
+    "exhibitIds": [
+      "ex-list-cleaner",
+      "ex-label-maker"
+    ],
+    "incidentIds": [
+      "version-mismatch"
+    ],
+    "nextIds": [
+      "confirm-version"
+    ]
+  },
+  {
+    "id": "confirm-version",
+    "phaseId": "intake",
+    "title": "確認展示版本與資料一致",
+    "role": "展品整理人員",
+    "prerequisites": [
+      "已取得展示入口與作品資料。"
+    ],
+    "steps": [
+      "記錄預計展示的版本或檔案識別。",
+      "核對作品頁、說明牌與操作文件中的名稱及功能。",
+      "如版本不一致，先記錄差異，再依目前可確認的正式版本修正。"
+    ],
+    "deliverable": "展示版本紀錄",
+    "doneWhen": [
+      "各處名稱及核心功能描述一致。",
+      "操作文件能對應目前展示版本。"
+    ],
+    "templateIds": [
+      "f01",
+      "f05"
+    ],
+    "exhibitIds": [
+      "ex-list-cleaner",
+      "ex-label-maker"
+    ],
+    "incidentIds": [
+      "version-mismatch"
+    ],
+    "nextIds": [
+      "check-environment"
+    ]
+  },
+  {
+    "id": "check-environment",
+    "phaseId": "preparation",
+    "title": "確認裝置與展示環境",
+    "role": "測試與設備人員",
+    "prerequisites": [
+      "展示入口與範例已齊全。"
+    ],
+    "steps": [
+      "在預計使用的裝置打開作品，確認文字、輸入及按鈕可操作。",
+      "使用固定範例執行主要功能，對照預期結果。",
+      "確認需要的網路、列印或下載條件，記錄未通過項目。"
+    ],
+    "deliverable": "設備與操作檢查紀錄",
+    "doneWhen": [
+      "檢查結果包含裝置、步驟及實際觀察。",
+      "未通過的項目有處理方式或展示調整。"
+    ],
+    "templateIds": [
+      "f02",
+      "f03"
+    ],
+    "exhibitIds": [
+      "ex-list-cleaner",
+      "ex-label-maker"
+    ],
+    "incidentIds": [
+      "entry-unavailable",
+      "input-device-issue"
+    ],
+    "nextIds": [
+      "prepare-fallback"
+    ]
+  },
+  {
+    "id": "prepare-fallback",
+    "phaseId": "preparation",
+    "title": "準備並試用備援材料",
+    "role": "測試與設備人員",
+    "prerequisites": [
+      "已辨認可能影響展示的條件。"
+    ],
+    "steps": [
+      "準備可下載的作品版本或實際操作截圖與說明。",
+      "按備援指引走一次，確認材料能開啟且版本相符。",
+      "在作品頁寫清楚備援提供的是實際操作或靜態說明。"
+    ],
+    "deliverable": "已核對的備援材料與使用說明",
+    "doneWhen": [
+      "備援檔案存在且可開啟。",
+      "備援內容與正式作品版本一致。",
+      "接手者知道備援方式的限制。"
+    ],
+    "templateIds": [
+      "f02",
+      "f04"
+    ],
+    "exhibitIds": [
+      "ex-list-cleaner",
+      "ex-label-maker"
+    ],
+    "incidentIds": [
+      "entry-unavailable",
+      "version-mismatch"
+    ],
+    "nextIds": [
+      "opening-check"
+    ]
+  },
+  {
+    "id": "opening-check",
+    "phaseId": "live",
+    "title": "展示前試跑固定範例",
+    "role": "現場示範人員",
+    "prerequisites": [
+      "已取得示範腳本與備援材料。"
+    ],
+    "steps": [
+      "確認開啟的是預定版本，並清楚辨認目前使用的展示方式。",
+      "按操作表執行固定範例，檢查結果與資料保留情況。",
+      "如有未解決問題，記錄影響，選擇已確認可用的展示方式。"
+    ],
+    "deliverable": "展示前檢查結果",
+    "doneWhen": [
+      "示範人員能完成一輪操作。",
+      "展示方式及未解決問題已交代。"
+    ],
+    "templateIds": [
+      "f03",
+      "f04",
+      "f05"
+    ],
+    "exhibitIds": [
+      "ex-list-cleaner",
+      "ex-label-maker"
+    ],
+    "incidentIds": [
+      "entry-unavailable",
+      "input-device-issue"
+    ],
+    "nextIds": [
+      "demonstrate-record"
+    ]
+  },
+  {
+    "id": "demonstrate-record",
+    "phaseId": "live",
+    "title": "示範作品並記錄問題",
+    "role": "現場示範人員",
+    "prerequisites": [
+      "固定範例已試跑。"
+    ],
+    "steps": [
+      "先說明作品解決的問題，再展示範例輸入及操作。",
+      "讓觀眾看見結果與限制，必要時以備援材料補充。",
+      "記錄可重現的問題、已採取處理及仍需接手的事項。"
+    ],
+    "deliverable": "示範與問題紀錄",
+    "doneWhen": [
+      "示範有輸入、操作與結果。",
+      "問題紀錄包含重現方式及下一步。"
+    ],
+    "templateIds": [
+      "f04",
+      "f05"
+    ],
+    "exhibitIds": [
+      "ex-list-cleaner",
+      "ex-label-maker"
+    ],
+    "incidentIds": [
+      "input-device-issue",
+      "entry-unavailable"
+    ],
+    "nextIds": [
+      "shift-handover"
+    ]
+  },
+  {
+    "id": "shift-handover",
+    "phaseId": "live",
+    "title": "執行換班交接與接手試跑",
+    "role": "接手者",
+    "prerequisites": [
+      "目前展示版本及 F04 操作表已備妥。",
+      "上一班已把問題、已做處理及下一步記錄於 F05 或交接紀錄。"
+    ],
+    "steps": [
+      "由上一班匯出交接紀錄，列明交付時間、展示入口與版本，以及仍待處理的事項。",
+      "接手者開啟收到的 Markdown 文件，逐項核對 F04 操作步驟；換裝置時不假設網站進度已同步。",
+      "依固定範例試跑展示工具，對照預期結果；不能重現時記下實際現象，連到問題處理指引。",
+      "在 F05 補上已收到的材料、接手職務及確認結果；未通過項目保留待處理，指定下一步。"
+    ],
+    "deliverable": "交付文件與接手試跑紀錄，包含未解決事項及下一步。",
+    "doneWhen": [
+      "接手者能找到本次展示入口與版本，且依文件得到指定範例結果。",
+      "每項未解決事項都有接手職務及下一步，未被誤標為已解決。",
+      "F05 記下交付材料與接手確認；若只是演練，清楚標示演練。"
+    ],
+    "templateIds": [
+      "f04",
+      "f05"
+    ],
+    "exhibitIds": [
+      "ex-list-cleaner",
+      "ex-label-maker"
+    ],
+    "incidentIds": [
+      "entry-unavailable",
+      "version-mismatch"
+    ],
+    "nextIds": [
+      "close-display"
+    ]
+  },
+  {
+    "id": "close-display",
+    "phaseId": "teardown",
+    "title": "結束展示並清點材料",
+    "role": "現場示範人員",
+    "prerequisites": [
+      "已結束當次展示。"
+    ],
+    "steps": [
+      "確認需保留的範例與問題紀錄已匯出或歸檔。",
+      "清除展示裝置上不需保留的臨時輸入，並確認不影響正式成果。",
+      "依清單點收借用設備、備援檔案及操作文件。"
+    ],
+    "deliverable": "撤展點收紀錄",
+    "doneWhen": [
+      "設備與展示材料的去向明確。",
+      "臨時資料與正式成果已區分。"
+    ],
+    "templateIds": [
+      "f03",
+      "f05"
+    ],
+    "exhibitIds": [],
+    "incidentIds": [],
+    "nextIds": [
+      "reconcile-records"
+    ]
+  },
+  {
+    "id": "reconcile-records",
+    "phaseId": "teardown",
+    "title": "整理未解決問題與目前版本",
+    "role": "展品整理人員",
+    "prerequisites": [
+      "已取得展示及問題紀錄。"
+    ],
+    "steps": [
+      "整理已解決、未解決及無法重現的問題。",
+      "確認公開入口與保存的版本是否一致。",
+      "把每個未完成事項交給明確職務，附必要資料與下一步。"
+    ],
+    "deliverable": "結束時的作品狀態與待辦",
+    "doneWhen": [
+      "問題狀態有依據。",
+      "接手者不用重新猜測問題與版本。"
+    ],
+    "templateIds": [
+      "f05"
+    ],
+    "exhibitIds": [
+      "ex-list-cleaner",
+      "ex-label-maker"
+    ],
+    "incidentIds": [
+      "version-mismatch"
+    ],
+    "nextIds": [
+      "assemble-package"
+    ]
+  },
+  {
+    "id": "assemble-package",
+    "phaseId": "archive",
+    "title": "組成完整交接包",
+    "role": "資料歸檔人員",
+    "prerequisites": [
+      "已確認目前成果與未完成事項。"
+    ],
+    "steps": [
+      "整理作品資料、操作文件、範本、備援及實際檢查紀錄。",
+      "記錄會影響下次工作的決策及理由。",
+      "建立目錄，確認每個入口都指向實際存在的檔案。"
+    ],
+    "deliverable": "含目錄與狀態的交接包",
+    "doneWhen": [
+      "主要文件可從目錄找到。",
+      "正式成果與歷史版本可辨認。"
+    ],
+    "templateIds": [
+      "f05"
+    ],
+    "exhibitIds": [
+      "ex-list-cleaner",
+      "ex-label-maker"
+    ],
+    "incidentIds": [
+      "version-mismatch"
+    ],
+    "nextIds": [
+      "verify-handover"
+    ]
+  },
+  {
+    "id": "verify-handover",
+    "phaseId": "archive",
+    "title": "依文件走查並準備下次擴充",
+    "role": "接手者",
+    "prerequisites": [
+      "交接包與目前狀態已整理。"
+    ],
+    "steps": [
+      "只依專案文件找出展示入口、操作方式及未完成事項。",
+      "實際試跑範例，檢查文件是否足以接續工作。",
+      "依 AGENTS.md 新增或修改一個單元，記錄相關頁面及文件的更新。"
+    ],
+    "deliverable": "接手走查與擴充紀錄",
+    "doneWhen": [
+      "能依文件完成指定操作。",
+      "新增或修改的內容沿用共同格式。",
+      "實際發現的缺漏已修正並留下紀錄。"
+    ],
+    "templateIds": [
+      "f04",
+      "f05"
+    ],
+    "exhibitIds": [
+      "ex-list-cleaner",
+      "ex-label-maker"
+    ],
+    "incidentIds": [
+      "version-mismatch"
+    ],
+    "nextIds": []
+  }
+]
