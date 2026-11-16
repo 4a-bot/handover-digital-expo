@@ -1,0 +1,130 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>清單整理器｜交接有據</title><style>@charset "UTF-8";
+:root,[data-theme="harbor"]{--bg:#f3f6f8;--surface:#fff;--surface-2:#f7f9fa;--ink:#183043;--muted:#617584;--line:#dce5ea;--accent:#096a73;--accent-soft:#e4f3f1;--accent-ink:#07565d;--gold:#ad7725;--gold-soft:#fff4df;--danger:#aa4141;--danger-soft:#fff0ed;--shadow:0 10px 32px #16324207;--radius:15px;--nav:#fff;--font:Inter,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;color-scheme:light}
+[data-theme="paper"]{--bg:#f3efe6;--surface:#fffdf8;--surface-2:#f7f3eb;--ink:#3a332c;--muted:#786d60;--line:#e4dacc;--accent:#9b4c31;--accent-soft:#f5e6db;--accent-ink:#854029;--gold:#96732c;--gold-soft:#fbefd5;--danger:#a93f3f;--danger-soft:#fce9e4;--shadow:0 8px 24px #49371f06;--radius:10px;--nav:#fbf8f1;color-scheme:light}
+[data-theme="night"]{--bg:#101922;--surface:#182530;--surface-2:#1c2c38;--ink:#e5eff3;--muted:#a0b3c0;--line:#30434f;--accent:#78d5c8;--accent-soft:#233f43;--accent-ink:#9be8dc;--gold:#e0b778;--gold-soft:#3c3326;--danger:#ffa38e;--danger-soft:#442c2c;--shadow:0 12px 30px #00000012;--radius:15px;--nav:#15212c;color-scheme:dark}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.7;font-size:15px}button,input,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.4;cursor:not-allowed}a{color:var(--accent-ink);text-decoration:none}a:hover{text-decoration:underline}h1,h2,h3,p{margin-top:0}h1{font-size:36px;line-height:1.3;letter-spacing:-1px;margin-bottom:14px}h2{font-size:19px}h3{font-size:16px}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.tool-shell{max-width:1180px;margin:auto;padding:28px 32px 44px}.tool-nav{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:44px}.tool-brand{font-weight:700;letter-spacing:2px}.tool-meta{font-size:12px;color:var(--muted)}.tool-hero{max-width:700px;margin-bottom:30px}.eyebrow{font:700 11px/1.5 ui-monospace,monospace;color:var(--accent-ink);letter-spacing:1.8px;margin-bottom:13px}.muted{color:var(--muted)}.tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}.tool-panel{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:26px;box-shadow:var(--shadow)}.panel-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;gap:10px}.panel-head h2{margin:0}.step{display:inline-grid;place-items:center;font:600 11px ui-monospace,monospace;background:var(--accent-soft);color:var(--accent-ink);width:24px;height:24px;border-radius:6px;margin-right:9px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 16px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);font-size:13px;font-weight:600;text-decoration:none}.btn:hover{border-color:var(--accent);text-decoration:none}.primary{background:var(--accent);color:var(--bg);border-color:var(--accent)}.quiet{border-color:transparent;background:transparent;color:var(--accent-ink)}.sm{padding:6px 10px;font-size:12px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}textarea,input[type=text]{display:block;width:100%;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);color:var(--ink);padding:12px;line-height:1.8}textarea{resize:vertical;min-height:120px}.list-input{min-height:270px;font-size:15px}.options{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:15px;font-size:13px}.options label{display:flex;gap:6px;align-items:center}input[type=checkbox]{accent-color:var(--accent);width:16px;height:16px}.stats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:8px;margin-top:15px;overflow:hidden}.stats div{padding:13px;text-align:center;background:var(--surface-2);border-right:1px solid var(--line)}.stats div:last-child{border-right:0}.stats strong{display:block;font-size:22px;font-weight:600}.stats span{font-size:11px;color:var(--muted)}.feedback{font-size:13px;color:var(--accent-ink);min-height:24px;margin:13px 0 0}.feedback.error,.error-text{color:var(--danger)}.small{font-size:12px}.tool-info{margin-top:26px;padding:24px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:35px}.tool-info p{margin-bottom:8px}.tool-info li{margin-bottom:5px}.tool-info ol{padding-left:20px}.field{display:block;margin-bottom:17px}.field-title{font-size:13px;font-weight:600;display:flex;justify-content:space-between;gap:10px;margin-bottom:6px}.field-title small{font-weight:400;color:var(--muted);font-size:11px}.error-text{font-size:12px;display:block;min-height:0}.error-text:empty{display:none}.preview-placeholder{min-height:300px;display:grid;place-content:center;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:8px;padding:30px}.preview-placeholder b{display:block;color:var(--ink);margin-bottom:10px}.exhibit-label{padding:32px 30px;background:#fffdf8;color:#203546;border:1px solid #dce3e8;border-radius:2px;position:relative;min-height:300px;overflow-wrap:anywhere}.exhibit-label:before{content:'';position:absolute;left:0;top:0;width:100%;height:7px;background:#186f77}.exhibit-label small{font:11px/1.5 ui-monospace,monospace;letter-spacing:2px;color:#53717b}.exhibit-label h2{font-size:29px;line-height:1.4;margin:26px 0 12px}.exhibit-label .format{font-size:12px;border:1px solid #a9bfc2;padding:3px 9px;display:inline-block;margin-bottom:20px;color:#225a62}.exhibit-label .description{font-size:15px;line-height:1.9;white-space:pre-wrap}.exhibit-label .credit{border-top:1px solid #dce3e8;padding-top:18px;margin-top:25px;font-size:12px;color:#59717f;white-space:pre-wrap}.count{font-variant-numeric:tabular-nums}.back-link{font-size:13px}.tool-footer{font-size:11px;color:var(--muted);margin-top:20px;display:flex;justify-content:space-between;gap:15px}.print-note{padding:12px;border-radius:6px;background:var(--accent-soft);font-size:12px;color:var(--accent-ink);margin-top:18px}[hidden]{display:none!important}.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+@media(max-width:720px){.tool-shell{padding:20px 18px}.tool-nav{margin-bottom:30px}.tool-grid,.tool-info{grid-template-columns:1fr}.tool-panel{padding:20px}.tool-hero h1{font-size:29px}.list-input{min-height:210px}input[type=text],textarea{font-size:16px}.tool-meta{font-size:10px}.tool-footer{display:block}.exhibit-label{padding:28px 22px}.exhibit-label h2{font-size:25px}.tool-info{gap:15px}}
+@media print{@page{size:A4;margin:20mm}body{background:white}.tool-shell{padding:0;max-width:none}.tool-nav,.tool-hero,.input-panel,.tool-info,.tool-footer,.panel-head,.actions,.feedback,.print-note{display:none!important}.tool-grid{display:block}.preview-panel{border:0;padding:0;box-shadow:none}.exhibit-label{width:100%;max-width:160mm;min-height:90mm;margin:auto;break-inside:avoid;box-shadow:none;print-color-adjust:exact;-webkit-print-color-adjust:exact}.preview-placeholder{display:none}}
+</style><script>(function () {
+  var allowed = ['harbor', 'paper', 'night'];
+  var chosen = new URLSearchParams(location.search).get('theme');
+  if (!allowed.includes(chosen)) {
+    try { chosen = localStorage.getItem('handover-theme-v1'); } catch (_) {}
+  }
+  document.documentElement.dataset.theme = allowed.includes(chosen) ? chosen : 'night';
+}());
+</script></head>
+<body><main class="tool-shell"><nav class="tool-nav" aria-label="工具導覽"><a class="back-link" id="back-link" href="../exhibits/">← 回展品檔案</a><span class="tool-brand">交接有據</span><span class="tool-meta" id="offline-note">示範工具 · v0.2</span></nav>
+<header class="tool-hero"><div class="eyebrow">PRACTICAL TOOLS / DIGITAL EXHIBITION</div><h1>清單整理器</h1><p class="muted">去掉空白與重複，留下真正需要的項目。</p></header>
+<div class="tool-grid"><section class="tool-panel input-panel"><div class="panel-head"><h2><span class="step">01</span>貼上原始清單</h2><button class="btn quiet sm" id="sample" type="button">載入範例</button></div>
+<label class="sr-only" for="source">原始清單</label><textarea id="source" class="list-input" placeholder="每一行一個項目，例如：&#10;延長線&#10;HDMI 線&#10;延長線" spellcheck="false"></textarea>
+<div class="options"><label><input type="checkbox" id="trim" checked>去除首尾空白</label><label><input type="checkbox" id="removeEmpty" checked>移除空行</label><label><input type="checkbox" id="deduplicate" checked>移除完全重複</label></div>
+<div class="actions"><button id="process" class="btn primary" type="button">整理清單</button><button id="clear" class="btn quiet" type="button">清空</button></div></section>
+<section class="tool-panel"><div class="panel-head"><h2><span class="step">02</span>查看整理結果</h2><span class="small muted">保留原順序</span></div>
+<label class="sr-only" for="output">整理結果</label><textarea id="output" class="list-input" readonly placeholder="整理後的項目會顯示在這裡。"></textarea>
+<div class="stats"><div><strong id="kept">—</strong><span>保留項目</span></div><div><strong id="empty-count">—</strong><span>移除空行</span></div><div><strong id="duplicate-count">—</strong><span>移除重複</span></div></div>
+<div class="actions"><button id="copy" class="btn" type="button" disabled>複製結果</button><button id="download" class="btn" type="button" disabled>下載 TXT</button></div><p id="feedback" class="feedback" role="status"></p></section></div>
+<section class="tool-info"><div><h3>示範怎麼做？</h3><p>載入範例後，原始 5 行會留下 3 筆：延長線、HDMI 線、筆電。移除 1 個空行與 1 個重複項目。</p><ol><li>貼上範例清單。</li><li>確認清理選項並執行整理。</li><li>對照三筆結果與移除數量。</li><li>複製或下載整理後文字。</li></ol></div><div><h3>使用範圍</h3><ul><li>只處理逐行文字，不辨認項目語意。</li><li>不把大小寫、全半形或內部空白不同的項目視為同一筆。</li></ul><p class="small muted">資料在瀏覽器內處理，不上傳。輸入不會自動保存，關閉頁面前請帶走需要的結果。</p></div></section>
+<footer class="tool-footer"><span>交接有據 · 本專案以 AI 協作開發的示範工具</span><span>兩種版本使用相同核心邏輯</span></footer></main>
+<script>const TOOL_ID="list-cleaner";const SAMPLE=" 延長線 \nHDMI 線\n延長線\n\n筆電";
+/** Pure browser-compatible logic shared by the exhibition demos. */
+function cleanList(source, options = {}) {
+  if (typeof source !== 'string') throw new TypeError('清單必須是文字。');
+  const { trim = true, removeEmpty = true, deduplicate = true } = options;
+  const input = source === '' ? [] : source.split(/\r\n|\n|\r/);
+  const lines = [];
+  const seen = new Set();
+  let emptyRemoved = 0;
+  let duplicatesRemoved = 0;
+  for (const original of input) {
+    const line = trim ? original.trim() : original;
+    if (removeEmpty && line.trim() === '') {
+      emptyRemoved += 1;
+      continue;
+    }
+    if (deduplicate && seen.has(line)) {
+      duplicatesRemoved += 1;
+      continue;
+    }
+    lines.push(line);
+    seen.add(line);
+  }
+  return {
+    text: lines.join('\n'),
+    lines,
+    stats: { input: input.length, output: lines.length, emptyRemoved, duplicatesRemoved },
+  };
+}
+
+const LABEL_FIELDS = Object.freeze([
+  { key: 'title', label: '作品名稱', required: true, max: 40 },
+  { key: 'format', label: '作品形式', required: true, max: 30 },
+  { key: 'description', label: '作品介紹', required: true, max: 160 },
+  { key: 'credit', label: '署名', required: false, max: 40 },
+]);
+
+function prepareLabel(input) {
+  if (!input || typeof input !== 'object' || Array.isArray(input)) {
+    throw new TypeError('請提供說明牌欄位。');
+  }
+  const values = {};
+  const errors = {};
+  for (const field of LABEL_FIELDS) {
+    const raw = input[field.key];
+    if (raw !== undefined && raw !== null && typeof raw !== 'string') {
+      values[field.key] = '';
+      errors[field.key] = `${field.label}必須是文字。`;
+      continue;
+    }
+    const value = (raw ?? '').trim();
+    values[field.key] = value;
+    if (field.required && value === '') {
+      errors[field.key] = `請填寫${field.label}。`;
+    } else if (Array.from(value).length > field.max) {
+      errors[field.key] = `${field.label}請控制在 ${field.max} 字以內；原文已保留。`;
+    }
+  }
+  // The future UI must render values with textContent, not innerHTML.
+  return { valid: Object.keys(errors).length === 0, values, errors };
+}
+
+/* This controller is embedded with the tested tool core into both online and offline HTML. */
+const $ = id => document.getElementById(id);
+function saveText(text,filename){const objectURL=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=objectURL;a.download=filename;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(objectURL),30000);}
+if(location.protocol==='file:'){$('back-link').hidden=true;$('offline-note').textContent='離線單檔版 · 不需網路';}
+function feedback(text,error=false){$('feedback').textContent=text;$('feedback').classList.toggle('error',error);}
+if(TOOL_ID==='list-cleaner'){
+  let result=null;
+  function stale(){result=null;$('copy').disabled=true;$('download').disabled=true;feedback($('output').value?'輸入或選項已變更，請重新整理清單。':'貼上清單或載入範例，然後按「整理清單」。');}
+  $('source').addEventListener('input',stale);
+  ['trim','removeEmpty','deduplicate'].forEach(id=>$(id).addEventListener('change',stale));
+  $('sample').addEventListener('click',()=>{$('source').value=SAMPLE;['trim','removeEmpty','deduplicate'].forEach(id=>$(id).checked=true);stale();$('source').focus();});
+  $('clear').addEventListener('click',()=>{$('source').value='';$('output').value='';['kept','empty-count','duplicate-count'].forEach(id=>$(id).textContent='—');stale();$('source').focus();});
+  $('process').addEventListener('click',()=>{
+    result=cleanList($('source').value,{trim:$('trim').checked,removeEmpty:$('removeEmpty').checked,deduplicate:$('deduplicate').checked});
+    $('output').value=result.text;$('kept').textContent=result.stats.output;$('empty-count').textContent=result.stats.emptyRemoved;$('duplicate-count').textContent=result.stats.duplicatesRemoved;
+    const valid=result.lines.length>0;$('copy').disabled=!valid;$('download').disabled=!valid;
+    feedback(valid?'已整理 '+result.stats.input+' 行，保留 '+result.stats.output+' 筆。':'目前沒有可保留的項目，請加入清單內容。');
+  });
+  $('copy').addEventListener('click',async()=>{if(!result)return;try{await navigator.clipboard.writeText(result.text);feedback('已複製整理結果。');}catch(_){$('output').focus();$('output').select();feedback('瀏覽器未允許複製，已選取結果，請使用系統複製功能。');}});
+  $('download').addEventListener('click',()=>{if(result){saveText(result.text,'clean-list.txt');feedback('已產生 clean-list.txt 下載檔案。');}});
+  stale();
+}else{
+  let current=false;
+  function counters(){for(const f of LABEL_FIELDS){$('count-'+f.key).textContent=Array.from($(f.key).value.trim()).length+'/'+f.max;}}
+  function stale(){current=false;$('print').disabled=true;counters();feedback('填寫後按「產生說明牌」，檢查完成再列印。');}
+  for(const f of LABEL_FIELDS)$(f.key).addEventListener('input',stale);
+  $('sample').addEventListener('click',()=>{for(const f of LABEL_FIELDS)$(f.key).value=SAMPLE[f.key]||'';for(const f of LABEL_FIELDS)$('error-'+f.key).textContent='';stale();$('title').focus();});
+  $('label-form').addEventListener('submit',e=>{
+    e.preventDefault();const result=prepareLabel(Object.fromEntries(LABEL_FIELDS.map(f=>[f.key,$(f.key).value])));
+    for(const f of LABEL_FIELDS){$('error-'+f.key).textContent=result.errors[f.key]||'';$(f.key).setAttribute('aria-invalid',result.errors[f.key]?'true':'false');}
+    current=result.valid;$('print').disabled=!current;
+    if(!current){feedback('請修正標示的欄位。原始文字已完整保留。',true);const first=LABEL_FIELDS.find(f=>result.errors[f.key]);$(first.key).focus();return;}
+    for(const f of LABEL_FIELDS)$('preview-'+f.key).textContent=result.values[f.key];
+    $('preview-credit').hidden=!result.values.credit;$('placeholder').hidden=true;$('label-preview').hidden=false;
+    feedback('說明牌已更新；請確認文字後列印。');
+  });
+  $('print').addEventListener('click',()=>{if(current)window.print();});
+  stale();
+}
+</script></body></html>
